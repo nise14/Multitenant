@@ -1,0 +1,19 @@
+@MutiTenancy_HostAddress = http://localhost:5289
+
+GET {{MutiTenancy_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+POST {{MutiTenancy_HostAddress}}/client2/todo
+Content-Type: application/json
+
+{
+    "title":"Eat sleep repeat"
+
+}
+
+###
+
+GET {{MutiTenancy_HostAddress}}/client2/todo
+Accept: "application/json"
